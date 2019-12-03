@@ -1,0 +1,33 @@
+
+
+<ion-content>
+    <ion-item lines="none">
+        <ion-label color="light">Username</ion-label>
+        <ion-input color="light" type="text" placeholder="User name" [(ngModel)]="Username"></ion-input>
+      </ion-item>
+      <br>
+    
+    <ion-item lines="none">
+        <ion-label color="light">Email</ion-label>
+        <ion-input color="light" type="email" placeholder="Adresse email" [(ngModel)]="email"></ion-input>
+      </ion-item>
+      <br>
+    
+      <ion-item lines="none">
+        <ion-label color="light">Password</ion-label>
+        <ion-input color="light" type="password" placeholder="Password" [(ngModel)]="password"></ion-input>
+      </ion-item>
+      <br>
+      <ion-item lines="none">
+          <ion-label color="light">Confirm Password</ion-label>
+          <ion-input color="light" type="password" placeholder="Confirm Password" [(ngModel)]="cpassword"></ion-input>
+        </ion-item>
+        <br>
+      <div class="flex">
+          <ion-button shape="round" >Reset</ion-button>
+          <ion-button shape="round" (click)="register()" >Confirm</ion-button>
+      </div>
+            
+        
+        
+</ion-content>

@@ -1,0 +1,10 @@
+ion-content{
+    --ion-background-color: linear-gradient( #4b79a1,#283e51);
+}
+ion-item{
+    --ion-background-color: transparent!important;
+}
+.flex{
+    display: flex;
+    justify-content: space-between;
+}

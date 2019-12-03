@@ -1,5 +1,7 @@
 {
   "name": "NewMarketIt",
-  "integrations": {},
+  "integrations": {
+    "cordova": {}
+  },
   "type": "angular"
 }
