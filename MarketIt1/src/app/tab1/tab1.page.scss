@@ -17,6 +17,10 @@
     font-size: 1em;
 
   }
+
+  .align{
+    text-align: center;
+  }
   
   b,h1,h2,h3,h4,h5,h6{
     font-stretch: semi-condensed;
@@ -56,6 +60,7 @@
     border-radius: 7px;
     width: 50%;
     overflow: hidden;
+    margin-left: 20%;
   }
   
   .img-box-detail{

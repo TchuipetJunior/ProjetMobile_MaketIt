@@ -11,8 +11,9 @@
   </div>
 
   <div class="ion-padding">
-    <table>
-      <tr *ngFor="let produit of produits">
+    <table *ngFor="let produit of produits">
+
+      <tr class="align">
         <!--debut des elements a boucler -->
         
         <td>
@@ -26,42 +27,13 @@
             </div>
             <h6>{{produit.name}}</h6>
             <h5 class="sub-title"><b>{{produit.price}}</b> {{produit.ville_vendeur}}</h5>
-            <ion-button (click)="Detail(produit)" slot="bottom">Details</ion-button>
-          </div>
-        </td>
-
-        <td>
-          <div class="product">
-            <div class="img-box-product">
-              <img [src]="produit.image">
-            </div>
-            <!--quantite du produit -->
-            <div class="product-button">
-              <ion-badge color="dark">{{produit.quantite}}</ion-badge>
-            </div>
-            <h6>{{produit.name}}</h6>
-            <h5 class="sub-title"><b>{{produit.price}}</b> {{produit.ville_vendeur}}</h5>
-            <ion-button (click)="Detail(produit)" slot="bottom">Details</ion-button>
-          </div>
-        </td>
-
-        <td>
-          <div class="product">
-            <div class="img-box-product">
-              <img [src]="produit.image">
-            </div>
-            <!--quantite du produit -->
-            <div class="product-button">
-              <ion-badge color="dark">{{produit.quantite}}</ion-badge>
-            </div>
-            <h6>{{produit.name}}</h6>
-            <h5 class="sub-title"><b>{{produit.price}}</b> {{produit.ville_vendeur}}</h5>
-            <ion-button (click)="Detail(produit)" slot="bottom">Details</ion-button>
+            <ion-button (click)="Detail(produit)" shape="round" fill="outline" size="small" slot="bottom">Details</ion-button>
           </div>
         </td>
 
               <!--fin des elements a boucler -->
       </tr>
+
     </table>
 
 <!-- <ion-grid>
