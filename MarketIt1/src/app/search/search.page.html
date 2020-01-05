@@ -1,0 +1,37 @@
+  <ion-content>
+    <div class="header">
+      <h1 class="title"><b> Rechercher un produit</b></h1>
+      <!-- fab placed to the top start -->
+      <ion-fab vertical="top" horizontal="start" slot="fixed">
+        <ion-fab-button href="/tab1">
+          <ion-icon name="arrow-back"></ion-icon>
+        </ion-fab-button>
+      </ion-fab>
+    </div>
+    
+
+    <ion-searchbar (ionInput)="FiltreProduits($event)"></ion-searchbar>
+  
+    <ion-grid>
+      <ion-row *ngFor="let produit of listProduits">
+        <!--debut des elements a boucler -->
+        <ion-col class="align">
+          <div class="product">
+            <div class="img-box-product">
+              <img [src]="produit.image">
+            </div>
+            <!--quantite du produit -->
+            <div class="product-button">
+              <ion-badge color="dark">{{produit.quantite}}</ion-badge>
+            </div>
+            <h6>{{produit.name}}</h6>
+            <h5 class="sub-title"><b>{{produit.price}}</b> {{produit.ville_vendeur}}</h5>
+            <ion-button (click)="Detail(produit)" slot="bottom">Details</ion-button>
+          </div>
+        </ion-col>
+              <!--fin des elements a boucler -->
+      </ion-row>
+    </ion-grid>
+    
+  </ion-content>
+  
