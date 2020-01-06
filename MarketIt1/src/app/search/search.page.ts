@@ -38,10 +38,10 @@ export class SearchPage {
   async Detail(produit: any){
     const alert =await this.alertCrtl.create({
       header: ' Detail du produit',
-      message: "<br> <div><center> <img width=40 src="+produit.image+"> </center></div> <div>"+produit.description+"</div> <center><ion-button (click)=gotoChat(produit)>Contactez le vendeur</ion-button></center>",
+      message: "<br> <div><center> <img height="+4+" width="+4+" src="+produit.image+"> </center></div> <div>"+produit.description+"</div> <center><a href='/tab3'><ion-button>Contactez le vendeur</ion-button></a></center>",
     }); 
     await alert.present();
-  }  
+  }    
 
 
 }
