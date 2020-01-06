@@ -19,30 +19,30 @@ export class Tab1Page {
     public NavCrtl : NavController
   ) {
     this.getProduits();
-    this.getCategories();
+    //this.getCategories();
     }
-
+    
     async Detail(produit: any){
       const alert =await this.alertCrtl.create({
         header: ' Detail du produit',
-        message: "<br> <div><center> <img width=40 src="+produit.image+"> </center></div> <div>"+produit.description+"</div> <center><ion-button (click)=gotoChat(produit)>Contactez le vendeur</ion-button></center>",
+        message: "<br> <div><center> <img width=40 src="+produit.image+"> </center></div> <div>"+produit.description+"</div> <center><a href='/tab3'><ion-button>Contactez le vendeur</ion-button></a></center>",
       }); 
       await alert.present();
     }   
 
-  getCategories() {
-    this.afDB.list('Categories/').snapshotChanges(['child_added', 'child_removed']).subscribe(actions => {
-      this.categories = [];
-      actions.forEach(action => {
-        this.categories.push({
-          key: action.key,
-          id_cat: action.payload.exportVal().id_cat,
-          description: action.payload.exportVal().description,
-          name: action.payload.exportVal().name
-         });
-      });
-    });
-  }
+  // getCategories() {
+  //   this.afDB.list('Categories/').snapshotChanges(['child_added', 'child_removed']).subscribe(actions => {
+  //     this.categories = [];
+  //     actions.forEach(action => {
+  //       this.categories.push({
+  //         key: action.key,
+  //         id_cat: action.payload.exportVal().id_cat,
+  //         description: action.payload.exportVal().description,
+  //         name: action.payload.exportVal().name
+  //        });
+  //     });
+  //   });
+  // }
 
   getProduits() {
     this.afDB.list('Produits/').snapshotChanges(['child_added', 'child_removed']).subscribe(actions => {
