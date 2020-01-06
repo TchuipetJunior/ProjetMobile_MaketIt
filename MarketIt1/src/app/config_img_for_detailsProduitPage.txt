@@ -1,0 +1,5 @@
+Go to this Location: node_modules/@ionic/angular/css/normalize.scss
+Change img { max-width: 100%; border: 0;} by this img { max-width: 50%; border: 0; }
+Save and close.
+
+The size of product the image in DetailsProductPage was be changed.
